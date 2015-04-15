@@ -72,13 +72,14 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                <img id='logo' height='45' width='40'  src='https://raw.githubusercontent.com/prashant1993/imgmining/master/static/img/logo.png'> <a class="navbar-brand page-scroll" href="#page-top" id="logotxt">Image Mining</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img id='logo' height='50' width='50'  src='https://raw.githubusercontent.com/prashant1993/imgmining/master/static/img/logo.png'> <a class="navbar-brand page-scroll" href="#page-top" id="logotxt">Image Mining</a>
+                
 
             </div>
 
@@ -185,7 +186,7 @@
     	            <div class="call-to-action">
                         <ul>
                             <li>
-                                <a href="#myModal1" data-toggle="modal" class="round green">
+                                <a href="#myModal1" data-toggle="modal" class="round green wow bounceIn text-primary" data-wow-delay=".4s">
                                     Upload and Search
                                     <span class="round">
                                         Upload One Image and look if any similar ones are available.
@@ -193,7 +194,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#myModal2" data-toggle="modal" class="round red">
+                                <a href="#myModal2" data-toggle="modal" class="round red wow bounceIn text-primary" data-wow-delay=".8s">
                                     Cluster Images
                                     <span class="round">
                                         Upload a set of images and see how a clustering tree is formed.
@@ -201,7 +202,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#myModal3" data-toggle="modal" class="round yellow">
+                                <a href="#myModal3" data-toggle="modal" class="round yellow wow bounceIn text-primary" data-wow-delay="1.2s">
                                     Exact Match Index
                                     <span class="round">
                                         Take a look if two uploaded images have any exact elements in common.
@@ -222,15 +223,16 @@
                 <h2 class="section-heading">Contact Students</h2>
                 
                 <hr class="primary">
+                
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://facebook.com/prashant19" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Prashant Shrivastava</span></a>
+                        <a href="https://facebook.com/prashant19" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".2s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Prashant Shrivastava</span></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/piyush.thirani" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Piyush Thirani</span></a>
+                        <a href="https://www.facebook.com/piyush.thirani" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".4s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Piyush Thirani</span></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/profile.php?id=100003153916016&fref=ts" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Rahul Jain</span></a>
+                        <a href="https://www.facebook.com/profile.php?id=100003153916016&fref=ts" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".6s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Rahul Jain</span></a>
                     </li>
                 </ul>
             </div>
@@ -241,9 +243,20 @@
             	
             	<ul class="list-inline banner-social-buttons">
 	            	<li>
-	                        <a href="#" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Mr. Rahul Gupta</span></a>
+	                        <a href="#" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".6s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Mr. Rahul Gupta</span></a>
 	                </li>
 	            </ul>
+            </div>
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="section-heading">Project Source Code</h2>
+                <hr class="primary">
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                            <a href="#" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay="1.2s" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Image Mining</span></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -294,7 +307,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">CSluster Images</h4>
+                        <h4 class="modal-title">Cluster Images</h4>
                     </div>
 
                     <div id='upload2' class="modal-body">
@@ -306,7 +319,7 @@
                               <a href="" id='uploadlink2'>
                                 <div class="fmcircle_border">
                                   <div class="fmcircle_in fmcircle_red">
-                                    <span>Upload to Collate</span><img src="http://s24.postimg.org/nabspz4hh/uploader.png" alt="" />
+                                    <span>Upload to Cluster</span><img src="http://s24.postimg.org/nabspz4hh/uploader.png" alt="" />
                                   </div>
                                 </div>
                               </a>
@@ -334,7 +347,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Confirmation</h4>
+                        <h4 class="modal-title">Similarity or Match Index</h4>
                     </div>
                     <div id='upload3' class="modal-body">
                         <div class="gridcontainer clearfix">
@@ -344,7 +357,7 @@
                               <a href="" id='uploadlink3'>
                                 <div class="fmcircle_border">
                                   <div class="fmcircle_in fmcircle_green">
-                                    <span>Upload to Cluster</span><img src="http://icons.iconarchive.com/icons/icons8/ios7/512/Very-Basic-Upload-To-Cloud-icon.png" alt="" />
+                                    <span>Upload to Collate</span><img src="http://icons.iconarchive.com/icons/icons8/ios7/512/Very-Basic-Upload-To-Cloud-icon.png" alt="" />
                                   </div>
                                 </div>
                               </a>

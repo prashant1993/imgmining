@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    max-width: 100px;
     border-color: #f05f40;
     border-width: 3px;
 }
@@ -43,6 +43,7 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    padding-top: 20px;
 }
 
 p {
@@ -484,7 +485,7 @@ body {
 }
 
 #Aaside ul {
-        margin: 30px auto;
+        margin: auto;
         text-align: center;
     }
 
@@ -659,35 +660,31 @@ body {
   font-size: 12px;
   line-height: 20px;
   background: url('https://dl.dropbox.com/u/65958930/OLR/dust.png') center center;
-  text-align: enter;
+  text-align: center;
 }
 /* -- Circular Work -- */
 .gridcontainer {
 
-  width: 720px;
-  margin: 30px auto;
 }
 
 .grid_3 {
-  display: inline;
-  float: left;
-  margin-left: 22%;
-  margin-right: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 220px;
 }
 
 .grid_9 {
   display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
   width: 700px;
 }
 
 .fmcircle_out {
   width: 200px;
   height: 200px;
-  background: rgba(221,221,221,0.3) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAO0lEQVQYV2NkIAIwElKze/fu/3gVgRS4uroyEjQJZBNWRTATYE7BUISuAKdJ6J6Bm4TNBBTr8CkAKQQA02QXOj4w/E8AAAAASUVORK5CYII=);
+  background: rgba(221,221,221,0.3) url('https://raw.githubusercontent.com/prashant1993/imgmining/master/static/img/background.png');
   text-align: center;
   display: block;
   margin-left: 10px;
