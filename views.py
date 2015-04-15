@@ -19,6 +19,11 @@ def homepage():
     #        print 'Trying to Register'
     #        print request.form
     return render_template("index.html")
+
+@app.route('/r',methods=['GET','POST'])
+def newpage():
+    return render_template("rp.html")
+
 """
 @app.route('/spacegame')
 def spacegame():
