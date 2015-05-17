@@ -45,6 +45,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/creative.css" type="text/css">
 
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -90,10 +91,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Methodology</a>
+                        <a class="page-scroll" href="#methodology">Methodology</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Live Demo</a>
+                        <a class="page-scroll" href="#demo">Live Demo</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Developers</a>
@@ -130,7 +131,7 @@
         </div>
     </section>
 
-    <section id="services">
+    <section id="methodology">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -179,7 +180,7 @@
 
 
 
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="demo">
 
         	<aside class="bg-dark" id="Aaside">
     	        <div class="container text-center">
@@ -243,7 +244,7 @@
             	
             	<ul class="list-inline banner-social-buttons">
 	            	<li>
-	                        <a href="#" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".6s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Mr. Rahul Gupta</span></a>
+	                        <a href="#" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".4s" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Mr. Rahul Gupta</span></a>
 	                </li>
 	            </ul>
             </div>
@@ -254,7 +255,7 @@
                 
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                            <a href="#" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay="1.2s" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Image Mining</span></a>
+                            <a href="https://github.com/prashant1993/imgmining" class="btn btn-default btn-lg wow bounceIn text-primary" data-wow-delay=".8s" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Image Mining</span></a>
                     </li>
                 </ul>
             </div>
@@ -263,7 +264,7 @@
 
     <div id="myModal1" class="modal fade">
 
-        <form id="upload-form" method="POST" enctype="multipart/form-data"> 
+        <form id="upload-form" action='{{url_for("upload")}}' method="POST" enctype="multipart/form-data" name="upload-form1"> 
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -271,7 +272,7 @@
                         <h4 class="modal-title">Image Search</h4>
                     </div>
                     <div id='upload1' class="modal-body">
-
+                        <input name="upform1" hidden>
                         <div class="gridcontainer clearfix">
                           <div class="grid_3">
                             <div class="fmcircle_out">
@@ -291,10 +292,14 @@
                             Drag and Drop Files Here
                         </div>
 
+                        <div id='imgSearch' class='Upimages'>
+
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Search</button>
                     </div>
                 </div>
             </div>
@@ -302,20 +307,20 @@
     </div>
 
     <div id="myModal2" class="modal fade">
-        <form id="upload-form1" method="POST" enctype="multipart/form-data">
+        <form id="upload-form1" action='{{url_for("upload")}}' method="POST" enctype="multipart/form-data">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Cluster Images</h4>
                     </div>
-
+                    <input name="upform2" hidden>
                     <div id='upload2' class="modal-body">
 
                         <div class="gridcontainer clearfix">
                           <div class="grid_3">
-                            <div class="fmcircle_out">
-                              <input id="file-picker2" type="file" name="file" accept="image/*" multiple>
+                            <div class="fmcircle_out"> 
+                            <input id="file-picker2" type="file" name="file" accept="image/*" multiple/>
                               <a href="" id='uploadlink2'>
                                 <div class="fmcircle_border">
                                   <div class="fmcircle_in fmcircle_red">
@@ -323,6 +328,7 @@
                                   </div>
                                 </div>
                               </a>
+                              
                             </div>
                           </div>
                         </div>
@@ -331,10 +337,14 @@
                             Drag and Drop Files Here
                         </div>
 
+                        <div id='imgCluster' class='Upimages'>
+
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Cluster Images</button>
                     </div>
                 </div>
             </div>
@@ -342,13 +352,14 @@
     </div>
 
     <div id="myModal3" class="modal fade">
-        <form id="upload-form2" method="POST" enctype="multipart/form-data">
+        <form id="upload-form2" action='{{url_for("upload")}}' method="POST" enctype="multipart/form-data">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Similarity or Match Index</h4>
                     </div>
+                    <input id="upload-form3" name="upload-form3" hidden>
                     <div id='upload3' class="modal-body">
                         <div class="gridcontainer clearfix">
                           <div class="grid_3">
@@ -368,10 +379,15 @@
                         <div id="dropbox2">
                             Drag and Drop Files Here
                         </div>
+
+                        <div id='imgCollate' class='Upimages'>
+
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Match Images</button>
                     </div>
                 </div>
             </div>
@@ -412,7 +428,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/static/js/creative.js"></script>
-
+    
     <!-- Buttons -->
     <script src='http://codepen.io/assets/editor/live/css_live_reload_init.js'></script>
     <script type='text/javascript'>//<![CDATA[
@@ -440,8 +456,105 @@
 
     //]]> 
 
+        window.onload = function () 
+        {
+            var fileUpload1 = document.getElementById("file-picker2");
+            var fileUpload3 = document.getElementById("file-picker3");
+            var fileUpload2 = document.getElementById("file-picker1");
+
+                fileUpload1.onchange = function () {
+                    if (typeof (FileReader) != "undefined") {
+                        var dvPreview = document.getElementById("imgCluster");
+                        dvPreview.innerHTML = "";
+                        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                        for (var i = 0; i < fileUpload1.files.length; i++) {
+                            var file = fileUpload1.files[i];
+                            if (regex.test(file.name.toLowerCase())) {
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    var img = document.createElement("IMG");
+                                    img.height = "100";
+                                    img.width = "100";
+                                    img.src = e.target.result;
+                                    dvPreview.appendChild(img);
+                                }
+                                reader.readAsDataURL(file);
+                            } else {
+                                alert(file.name + " is not a valid image file.");
+                                dvPreview.innerHTML = "";
+                                return false;
+                            }
+                        }
+                    } else {
+                        alert("This browser does not support HTML5 FileReader.");
+                    }
+                };
+
+            fileUpload3.onchange = function () {
+                if (typeof (FileReader) != "undefined") {
+                    var dvPreview = document.getElementById("imgCollate");
+                    dvPreview.innerHTML = "";
+                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                    for (var i = 0; i < fileUpload3.files.length; i++) {
+                        var file = fileUpload3.files[i];
+                        if (regex.test(file.name.toLowerCase())) {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                var img = document.createElement("IMG");
+                                img.height = "100";
+                                img.width = "100";
+                                img.src = e.target.result;
+                                dvPreview.appendChild(img);
+                            }
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert(file.name + " is not a valid image file.");
+                            dvPreview.innerHTML = "";
+                            return false;
+                        }
+                    }
+                } else {
+                    alert("This browser does not support HTML5 FileReader.");
+                }
+            };
+
+            
+            fileUpload2.onchange = function () {
+                if (typeof (FileReader) != "undefined") {
+                    var dvPreview = document.getElementById("imgSearch");
+                    dvPreview.innerHTML = "";
+                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                    for (var i = 0; i < fileUpload2.files.length; i++) {
+                        var file = fileUpload2.files[i];
+                        if (regex.test(file.name.toLowerCase())) {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                var img = document.createElement("IMG");
+                                img.height = "100";
+                                img.width = "100";
+                                img.src = e.target.result;
+                                dvPreview.appendChild(img);
+                            }
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert(file.name + " is not a valid image file.");
+                            dvPreview.innerHTML = "";
+                            return false;
+                        }
+                    }
+                } else {
+                    alert("This browser does not support HTML5 FileReader.");
+                }
+            };
+        
+        };
+
+        
+            
 
     </script>
+
+    
 
 </body>
 
